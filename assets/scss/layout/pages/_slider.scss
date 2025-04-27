@@ -1,0 +1,35 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.1 Slider css
+/*----------------------------------------*/
+.beforeAfter {
+    height: 570px;
+    @media #{$xs} {
+        height: 500px;
+    }
+    & img {
+        max-width: inherit;
+        height: 570px;
+        object-fit: cover;
+        @media #{$xs} {
+            height: 500px;
+        }
+    }
+}
+.before-after-2 {
+    &-thumb {
+        margin-left: -30px;
+        @media #{$lg,$md,$xs} {
+            margin-left: 0;
+        }
+        & .beforeAfter {
+            & img {
+                border-radius:  6px;
+            }
+        }
+    }
+    & .tpsection p {
+        margin-bottom: 40px;
+    }
+}

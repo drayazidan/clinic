@@ -1,0 +1,144 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 Pricing css
+/*----------------------------------------*/
+.tppricing {
+    background-color: var(--tp-common-white);
+    box-shadow: 0px 25px 65px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    @include transition(.3s);
+    &-thumb {
+        padding: 20px 20px 0px 20px;
+        & img {
+            border-radius: 6px;
+        }
+        & span {
+            position: absolute;
+            display: inline-block;
+            bottom: -22px;
+            left: 40px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            border: 3px solid var(--tp-common-white);
+            padding: 6px 14px;
+            border-radius: 4px;
+            z-index: 1;
+            @include transition(.3s);
+            &::before {
+                position: absolute;
+                content: '';
+                border-radius: 4px;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                background-color: var(--tp-theme-primary);
+                left: 0;
+                top: 0;
+                @include transition(.3s);
+            }
+        }
+    }
+    &-content {
+        padding:  50px  40px 40px 40px;
+        @media #{$lg} {
+            padding: 50px 30px 40px 30px;
+        }
+        @media #{$xs} {
+            padding: 50px 15px 40px 15px;
+        }
+    }
+    &-ammount {
+        font-size: 48px;
+        line-height: 1.1;
+        display: inline-block;
+        @media #{$xs} {
+            font-size: 36px;
+        }
+    }
+    &-price {
+        margin-bottom: 40px;
+        & span {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--tp-text-body);
+            display: inline-block;
+            margin-left: 4px;
+        }
+    }
+    &-list {
+        margin-bottom: 45px;
+        & li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+            font-size: 24px;
+            border-bottom: 1px solid rgba(72, 30, 11, 0.1);
+            @media #{$xs} {
+                font-size: 18px;
+            }
+            &:last-child {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border: none;
+            }
+            & span {
+                display: inline-block;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.5;
+                color: var(--tp-common-white);
+                background-color: var(--tp-heading-primary);
+                padding: 7px 14px;
+                border-radius: 4px;
+                @media #{$xs} {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    &-btn {
+        & button {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--tp-heading-primary);
+            background-color: var(--tp-theme-4);
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 23px 10px;
+            border-radius: 6px;
+            &:hover {
+                background-color: var(--tp-theme-primary);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &:hover ,
+    &-active {
+        box-shadow:none;
+        background-color: var(--tp-heading-primary);
+        & .tppricing-ammount {
+            color: var(--tp-common-white);
+        }
+        & .tppricing-price span {
+            color: var(--tp-common-white);
+        }
+        & .tppricing-thumb span {
+            border: 3px solid var(--tp-heading-primary);
+        }
+        & .tppricing-list li {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        & .tppricing-list li span{
+            background: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

@@ -1,0 +1,161 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  Banner Style 4
+/*----------------------------------------*/
+.tpbanner-4 {
+    background: rgba(205, 95, 55, 0.1);
+    &-bg {
+        position: relative;
+        z-index: 1;
+        &::before {
+            background: linear-gradient(90deg, #FAEFEB 37.44%, rgba(250, 239, 235, 0) 61.17%);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+    &-thumb-bg {
+        background-position: top right;
+        background-repeat: no-repeat;
+        padding-top: 244px;
+        padding-bottom: 266px;
+        position: relative;
+        @media #{$xs} {
+            padding-top: 180px;
+            padding-bottom: 180px;
+        }
+    }
+    &-title-2 {
+        font-size: 120px;
+        line-height: 1.1;
+        margin-bottom: 52px;
+        @media #{$xs} {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+    &-btn {
+        flex: 0 0 auto;
+        margin-bottom: 15px;
+        & a {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            border-radius: 12px;
+            background-color: var(--tp-theme-primary);
+            padding: 30px 38px;
+            border: 2px solid var(--tp-theme-primary);
+            display: inline-block;
+            @media #{$xs} {
+                padding: 15px 38px;
+            }
+            &:hover {
+                background-color: var(--tp-common-white);
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-wrapper {
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+        & p {
+            font-size: 24px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            margin-left: 52px;
+            @media #{$xs} {
+                margin-left: 0px;
+            }
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-next {
+        &-thumb {
+            width: 320px;
+            margin-left: -160px;
+            overflow: hidden;
+        }
+        &-item {
+            & img {
+                height: 160px;
+                width: 160px;
+                object-fit: cover;
+                border-radius: 12px 0px 0px 0px;
+                @media #{$xs} {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+        &-wrap{
+            position: absolute;
+            bottom: 26px;
+            left: 0;
+            right: 0px;
+        }
+        &-btn {
+            &-single {
+                position: absolute;
+                bottom: 18px;
+                left: 24.4%;
+                font-size: 48px;
+                line-height: 1.1;
+                background-color: var(--tp-theme-4);
+                border-radius: 0px 12px 0px 0px;
+                padding: 54px 33px;
+                margin-bottom: 8px;
+                font-family: var(--tp-ff-heading);
+                color: var(--tp-heading-primary);
+                @media #{$xxxl} {
+                    left: 19.6%;
+                }
+                @media #{$xxl} {
+                    left: 15.2%;
+                }
+                @media #{$xl} {
+                    left: 16.9%;
+                }
+                @media #{$lg} {
+                    left: 19.2%;
+                }
+                @media #{$xs} {
+                    left: 35.4%;
+                    font-size: 38px;
+                    padding: 29px 13px;
+                }
+            }
+        }
+    }
+}
+// slider-1-animation
+.slick-active {
+    & .tpbanner-4-title-2,
+    & .tpbanner-4-btn,
+    & .tpbanner-4-wrapper p {
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+    }
+}
+
+.slick-active .tpbanner-4-title-2 {
+    animation-delay: .6s;
+    animation-duration: .6s;
+}
+.slick-active .tpbanner-4-btn {
+    animation-delay: .8s;
+    animation-duration: .8s;
+}
+.slick-active .tpbanner-4-wrapper p {
+    animation-delay: .8s;
+    animation-duration: .8s;
+}

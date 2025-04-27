@@ -1,0 +1,147 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.tpsection {
+    &-sub-title {
+        & span {
+            position: relative;
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-theme-primary);
+            font-weight: 400;
+            @media #{$xs} {
+                font-size: 18px;
+            }
+            &::before {
+                content: "";
+                width: 80px;
+                height: 1.5px;
+                background-color: var(--tp-theme-primary);
+                display: inline-block;
+                margin-right: 20px;
+                transform: translateY(-8px);
+            }
+        }
+    }
+    &-title {
+        font-size: 80px;
+        line-height: 1.1;
+        @media #{$xl} {
+            font-size: 74px;
+        }
+        @media #{$lg} {
+            font-size: 70px;
+        }
+        @media #{$md} {
+            font-size: 64px;
+        }
+        @media #{$xs} {
+            font-size: 44px;
+        }
+        & br {
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    & p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--tp-text-body);
+        & br {
+            @media #{$xl,$lg,$sm} {
+                display: none;
+            }
+        }
+    }
+    &-anim {
+        z-index: 1;
+        & span {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: -1;
+            & i,
+            svg {
+                color: #FFC8B6;
+                @media #{$xs} {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    &-round-subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--tp-common-white);
+        background-color: var(--tp-theme-primary);
+        padding: 4px 12px;
+        border-radius: 16px;
+        display: inline-block;
+    }
+}
+.tpsection {
+    &-top {
+        &.pt-160 {
+            @media #{$xs} {
+                padding-top: 80px;
+            }
+        }
+    }
+}
+
+.whitesection {
+    &-sub-title {
+        & span {
+            position: relative;
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            font-weight: 400;
+            &::before {
+                content: "";
+                width: 80px;
+                height: 1.5px;
+                background-color: var(--tp-common-white);
+                display: inline-block;
+                margin-right: 20px;
+                transform: translateY(-8px);
+            }
+        }
+    }
+    &-title {
+        font-size: 80px;
+        line-height: 1.1;
+        color: var(--tp-common-white);
+        @media #{$xs} {
+            font-size: 44px;
+            margin-bottom: 30px;
+        }
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    & p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--tp-common-white);
+    }
+    &-round-subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--tp-heading-primary);
+        background-color: var(--tp-theme-4);
+        padding: 4px 12px;
+        border-radius: 16px;
+        display: inline-block;
+    }
+}

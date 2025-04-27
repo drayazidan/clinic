@@ -1,0 +1,495 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.17 Team css
+/*----------------------------------------*/
+.team {
+    &-item {
+        position: relative;
+        &:hover {
+            & .team-content {
+                height: 345px;
+            }
+            & .team-author-social {
+                transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
+                transition-delay: 0.6s;
+            }
+            & .team-author-title {
+                transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
+                transition-delay: 0.7s;
+            }
+            & .team-author-position {
+                transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
+                transition-delay: 0.9s;
+            }
+        }
+    }
+    &-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 0px;
+        width: 345px;
+        background-color: var(--tp-theme-primary);
+        bottom: -152px;
+        border-radius: 50%;
+        @include transition(.3s);
+        z-index: 9;
+        @media #{$md} {
+            left: -7px;
+        }
+        @media #{$xs} {
+            left: -25px;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--tp-theme-primary);
+            opacity: .2;
+            border-radius: 50%;
+            transform: scale(1.07);
+            z-index: -1;
+        }
+    }
+    &-author {
+        &-social  {
+            transform: translateY(5px);
+            transition-delay: 0.1s;
+            @include transition(.2s);
+            opacity: 0;
+            visibility: hidden;
+            & a {
+                &:hover {
+                    & i {
+                        background: rgba(255, 255, 255, 1);
+                        color: var(--tp-theme-primary);   
+                    }
+                }
+                & i {
+                    @include square-btn (32px, $circle: true);
+                    background: rgba(255, 255, 255, 0.15);
+                    color: var(--tp-common-white);
+                    font-size: 12px;
+                    @include transition(.3s);
+                    margin: 0 4px;
+                }
+            }
+        }
+        &-title {
+            font-size: 36px;
+            line-height: 1.1;
+            color: var(--tp-common-white);
+            margin-bottom: 0;
+            transform: translateY(5px);
+            visibility: hidden;
+            opacity: 0;
+            transition-delay: .1s;
+            @include transition(.3s);
+        }
+        &-position {
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            transform: translateY(5px);
+            visibility: hidden;
+            opacity: 0;
+            transition-delay: .1s;
+            @include transition(.3s);
+        }
+    }
+    &-profile {
+        & img {
+            width: 100%;
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+    }
+    &-arrows {
+        @media #{$md,$xs} {
+            justify-content: start !important;
+        }
+    }
+}
+.team-3 {
+    &:hover {
+        & .team-3-shape {
+            bottom: 0px;
+            opacity: 1;
+            visibility: visible;
+            @media #{$xl} {
+                left: -30px;
+            }
+            @media #{$lg} {
+                left: -42px;
+            }
+            @media #{$md} {
+                left: -40px;
+            }
+        }
+        & .team-3-social {
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0.4s;
+        }
+    }
+    &-top {
+        & .tpsection-title {
+            font-size: 80px;
+            line-height: 1;
+            margin-bottom: 0;
+            @media #{$lg} {
+                font-size: 76px;
+            }
+            @media #{$xs} {
+                font-size: 46px;
+            }
+        }
+    }
+    &-thumb {
+        position: relative;
+        padding: 24px;
+        border: 1px solid var(--tp-theme-primary);
+        border-radius: 205px;
+        @media #{$lg} {
+            padding: 5px;
+        }
+        @media #{$md,$xs} {
+            padding: 15px;
+        }
+        @media #{$sm} {
+            padding: 5px;
+        }
+        &-main {
+            border-radius: 181px;
+        }
+        & img {
+            border-radius: 181px;
+            min-height: 552px;
+            object-fit: cover;
+        }
+    }
+    &-shape {
+        position: absolute;
+        bottom: -150px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        @media #{$xs} {
+            left: -58px;
+        }
+        @media #{$sm} {
+            left: -65px;
+        }
+        & svg {
+            color: var(--tp-theme-primary);
+        }
+    }
+    &-social {
+        position: absolute;
+        bottom: 93px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transform: translateY(8px);
+        transition-delay: 0.2s;
+        @include transition(.3s);
+        opacity: 0;
+        visibility: hidden;
+        & a {
+            display: inline-block;
+            margin: 0 4px;
+            &:nth-child(2) {
+                transform: translateY(8px);
+            }
+            i {
+                @include square-btn (56px, $circle: true);
+                background: rgba(255, 255, 255, 0.15);
+                color: var(--tp-common-white);
+                font-size: 21px;
+                @include transition(.3s);
+                &:hover {
+                    background: rgba(255, 255, 255, 1);
+                    color: var(--tp-theme-primary);
+                }
+                @media #{$md} {
+                    @include square-btn (40px, $circle: true);
+                    font-size: 15px;
+                }
+                @media #{$xs} {
+                    @include square-btn (46px, $circle: true);
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    &-content {
+        & span {
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-text-body);
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+    }
+    &-title {
+        font-size: 48px;
+        line-height: 1.1;
+        @media #{$lg,$xs,$md} {
+            font-size: 38px;
+        }
+        @media #{$sm} {
+            font-size: 30px;
+        }
+        & a {
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 1px;
+                background: var(--tp-theme-primary);
+                left: auto;
+                right: 0;
+                bottom: 8px;
+                opacity: 0;
+                transition: all 0.3s linear;
+            }
+            &:hover {
+                color: var(--tp-theme-primary);
+                &::before {
+                    opacity: 1;
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                    transition: all 0.2s linear;
+                }
+            }
+        }
+    }
+    &-arrows {
+        @media #{$md,$xs} {
+            justify-content: start !important;
+        }
+    }
+}
+.team-3-single ,
+.team-single ,
+.testimonial-single {
+    &-arrow {
+        & i ,
+        & span {
+            @include square-btn(80px , $circle: true);
+            border: 2px solid #481E0B;
+            border-radius: 50%;
+            display: inline-block;
+            line-height: 72px;
+            @include transition(.4s);
+            color: #481E0B;
+            & svg {
+                @media #{$xs} {
+                    width: 24px;
+                }
+            }
+            @media #{$xs} {
+                @include square-btn(50px , $circle: true);
+                line-height: 44px;
+            }
+            &:hover {
+                background: var(--tp-theme-primary);
+                border-color: var(--tp-theme-primary);
+                color: var(--tp-common-white);
+                box-shadow: inset 0 0 0 40px var(--tp-theme-primary);
+            }
+        }
+    }
+}
+.team-4 {
+    &-item {
+        &:hover {
+            & .team-4-btn {
+                transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
+            }
+            & .team-4-thumb-1,
+            & .team-4-thumb-2,
+            & .team-4-thumb-3 {
+                & img {
+                    transform: scale(1.08);
+                }
+            }
+        }
+        & .team-3-title a {
+            &:hover {
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-thumb {
+        overflow: hidden;
+        & img {
+            @include transition(2s);
+        }
+    }
+    &-thumb-1 {
+        border-radius: 3% 50% 50% 3%;
+        & img {
+            border-radius: 3% 50% 50% 3%;
+            height: 410px;
+            width: 410px;
+            object-fit: cover;
+        }
+    }
+    &-thumb-2 {
+        border-radius: 50%;
+        & img {
+            border-radius: 50%;
+        }
+    }
+    &-thumb-3 {
+        border-radius: 205px 12px 0px;
+        & img {
+            border-radius: 205px 12px 0px;
+        }
+    }
+    &-btn {
+        transform: translateY(8px);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        & .tp-btn {
+            border: 2px solid var(--tp-theme-primary);
+            border-radius: 12px;
+            font-weight: 500;
+            padding: 23px 62px;
+            @media #{$xs} {
+                padding: 20px 50px;
+            }
+        }
+    }
+}
+.team-details {
+    &-thumb {
+        border: 1px solid var(--tp-theme-primary);
+        display: inline-block;
+        padding: 15px;
+    }
+    &-wrapper {
+        & span {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-theme-primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #6A5952;
+        }
+    }
+    &-title {
+        font-size: 80px;
+        line-height: 1.1;
+        margin-bottom: 0;
+        @media #{$xl} {
+            font-size: 60px;
+        }
+        @media #{$lg} {
+            font-size: 50px;
+        }
+        @media #{$xs} {
+            font-size: 40px;
+        }
+    }
+    &-info {
+        & ul {
+            display: inline-block;
+            & li {
+                list-style: none;
+                float: left;
+                width: 50%;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 28px;
+                color: #6A5952;
+                @media #{$lg,$xs} {
+                    width: 100%;
+                }
+                & br {
+                    @media #{$xl,$lg,$xs} {
+                        display: none;
+                    }
+                }
+                & span {
+                    color: var(--tp-theme-primary);
+                }
+            }
+        }
+    }
+    &-quotes {
+        background: #FCF4F1;
+        margin-top: 11px;
+        padding: 47px 40px 35px 40px;
+        @media #{$xs} {
+            padding: 47px 20px 35px 20px;
+        }
+        &-icon {
+            & span {
+                color: var(--tp-theme-primary);
+                display: inline-block;
+                margin-bottom: 45px;
+            }
+        }
+        &-content {
+            & p {
+                font-size: 24px;
+                line-height: 1.5;
+                color: #6A5952;
+                position: relative;
+                padding-bottom: 38px;
+                margin-bottom: 40px;
+                @media #{$xl,$lg} {
+                    font-size: 20px;
+                }
+                @media #{$xs} {
+                    font-size: 18px;
+                }
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgba(72, 30, 11, 0.1);
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        &-btn {
+            & .tp-btn {
+                padding: 23px 35px;
+            }
+        }
+    }
+}

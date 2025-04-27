@@ -1,0 +1,35 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.6 Header Style 6
+/*----------------------------------------*/
+.header-6 {
+    & .main-menu ul li > a {
+        color: var(--tp-heading-primary);
+    }
+    & .menu-position {
+        margin-left: 80px;
+    }
+    & .header__top-content span {
+        display: inline-block;
+        color: var(--tp-common-white);
+        padding: 12px 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    & .offcanvas-open-btn i {
+        color: #481E0B;
+        background-color: transparent;
+        line-height: 60px;
+        @include transition(.3s);
+        &:hover {
+            color: var(--tp-theme-primary);
+        }
+    }
+    & .main-menu ul li:hover > a {
+        color: var(--tp-theme-primary);
+    }
+    & .header-sticky {
+        background-color: var(--tp-common-white);
+    }
+}

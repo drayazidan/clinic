@@ -1,0 +1,74 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5 Header Style 5
+/*----------------------------------------*/
+.main-menu-5 {
+    &.main-menu-4 {
+        padding: 20px 0 20px 0px;
+    }
+    &.main-menu ul li {
+        margin-right: 30px;
+    }
+}
+.header-5 {
+    &__right {
+        & a ,
+        & button {
+            margin-left: 40px;
+        }
+        & .need-help {
+            background-color: var(--tp-common-white);
+            padding: 8px 24px 8px 8px;
+            box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.05);
+            border-radius: 36px;
+            @include transition(.3s);
+            &:hover {
+                background-color: var(--tp-theme-primary);
+                & span {
+                    color: var(--tp-common-white);
+                }
+            }
+            & img {
+                height: 56px;
+                width: 56px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 6px;
+            }
+            & span {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.5;
+                color: var(--tp-heading-primary);
+                @media #{$xl} {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    &-border {
+        border-bottom: 1px solid rgba(72, 30, 11, 0.1);
+        @media #{$lg,$md,$xs,$sm} {
+            border: none;
+        }
+    }
+    &.header-sticky {
+        background-color: var(--tp-common-white);
+        & .main-menu-5.main-menu-4 {
+            padding: 0px 0 0px 0px;
+        }
+        & .header-5__right .need-help {
+            padding: 4px 24px 4px 8px;
+        }
+    }
+}
+.offcanvas-btn-5 {
+    & .offcanvas-open-btn i {
+        background-color: rgba(205, 95, 55, 1);
+        @include transition(.3s);
+        &:hover {
+            background-color: rgba(205, 95, 55, .8)
+        }
+    }
+}

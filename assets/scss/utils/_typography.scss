@@ -1,0 +1,43 @@
+
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap';
+
+
+
+// custom Gordita font
+
+@font-face {
+    font-family: 'Virsace Bigiora';
+    src: 
+        url('../fonts/VirsaceBigiora-Regular.woff') format('woff'),
+        url('../fonts/VirsaceBigiora-Regular.eot') format('eot'),
+        url('../fonts/VirsaceBigiora-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'DM Sans', sans-serif",
+        'heading': "'Virsace Bigiora', sans-serif",
+        'p': "'DM Sans', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 20px,
+        'p': 24px,
+    )
+);
+
+

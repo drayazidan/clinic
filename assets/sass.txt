@@ -1,0 +1,5 @@
+sass --watch C:\Users\matiour\Dropbox\Matiour\vamary-pac\vamary\assets\scss\main.scss:C:\Users\matiour\Dropbox\Matiour\vamary-pac\vamary\assets\css\main.css
+
+
+
+sass --watch C:\Users\MR\Dropbox\Matiour\vamary\assets\scss\main.scss:C:\Users\MR\Dropbox\Matiour\vamary\assets\css\main.css

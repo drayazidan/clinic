@@ -1,0 +1,37 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.13 Tab
+/*----------------------------------------*/
+
+.tp-tab{
+    & .nav-tabs{
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        & .nav-link{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+    }
+}
+
+
+.beforeAfter {
+    z-index: 1 !important;
+}
+.beforeAfter div div div {
+	background: transparent !important;
+	height: 80px !important;
+	width: 80px !important;
+	line-height: 74px !important;
+    border: 2px solid #FFFFFF !important;
+    z-index: -1 !important;
+    & i {
+        border-color: #fff !important;
+        padding: 5px !important;
+        margin: 0 5px !important;
+    }
+}

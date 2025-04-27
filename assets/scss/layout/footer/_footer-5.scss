@@ -1,0 +1,118 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.5 Footer Style 5
+/*----------------------------------------*/
+.footer-5-col {
+    &-2 {
+        margin-left: 70px;
+        @media #{$lg,$xs} {
+            margin-left: 0;
+        }
+    }
+    &-3 {
+        margin-left: -25px;
+        @media #{$lg} {
+            margin-left: -18px;
+        }
+        @media #{$md,$xs} {
+            margin-left: 0px;
+        }
+    }
+    &-4 {
+        margin-left: 25px;
+        @media #{$md} {
+            margin-left: -50px;
+        }
+        @media #{$xs} {
+            margin-left: 0px;
+        }
+    }
+}
+
+.footer-5 {
+    &-logo {
+        padding: 65px 0 68px 0;
+    }
+    &-support {
+        & span {
+            font-size: 24px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            @media #{$xs} {
+                font-size: 20px;
+            }
+        }
+    }
+    &-form {
+        & input {
+            width: 100%;
+            height: 64px;
+            background-color: var(--tp-common-white);
+            border: none;
+            border-radius: 44px;
+            margin-bottom: 14px;
+            &::placeholder {
+                font-size: 20px;
+                line-height: 1.5;
+                color: var(--tp-text-body);
+            }
+            &:focus {
+                &::placeholder {
+                    font-size: 0;
+                }
+            }
+        }
+        & .submit-btn {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            background-color: var(--tp-theme-primary);
+            border-radius: 44px;
+            width: 100%;
+            text-align: center;
+            padding: 17px 0;
+            &:hover {
+                background-color: var(--tp-common-white);
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-border {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+.footer-top-5 {
+    & .footer-title {
+        color: var(--tp-common-white);
+    }
+    & .footer-link li a {
+        color: rgba(255, 255, 255, 0.7);
+        &:hover {
+            color: var(--tp-theme-primary);
+        }
+    }
+    & .footer-info p {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 20px;
+    }
+    & .footer-post-3-title {
+        color: var(--tp-common-white);
+    }
+    & .footer-post-3-date {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    & .footer-post-3-date i svg {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    & .footer-post-3-thumb img {
+        border-radius: 6px;
+    }
+}
+.footer-bottom-5 {
+    & .footer-copyright span {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}

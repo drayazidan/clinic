@@ -1,0 +1,100 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.7 Footer Style 7
+/*----------------------------------------*/
+.footer-7 {
+    &-info {
+        & a{
+            font-size: 48px;
+            line-height: 1.1;
+            display: inline-block;
+            @media #{$xs} {
+                font-size: 24px;
+            }
+            &:hover  {
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-btn {
+        margin-bottom: 0;
+        & a {
+            font-size: 48px;
+            line-height: 1.1;
+            color: var(--tp-common-white);
+            background-color: var(--tp-theme-primary);
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 41px 10px;
+            border: 2px solid var(--tp-theme-primary);
+            @media #{$xs} {
+                font-size: 34px;
+            }
+            &:hover {
+                background-color: var(--tp-common-white);
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-main {
+        border-top: 1px solid rgba(72, 30, 11, 0.1);
+        border-bottom: 1px solid rgba(72, 30, 11, 0.1);
+    }
+    &-list {
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media #{$xs} {
+                flex-wrap: wrap;
+            }
+            & li {
+                list-style: none;
+                border-right: 1px solid rgba(72, 30, 11, 0.1);
+                width: 20%;
+                @media #{$xs} {
+                    width: 100%;
+                    border-right: 0;
+                }
+                &:first-child {
+                    border-left: 1px solid rgba(72, 30, 11, 0.1);
+                    @media #{$xs} {
+                        border-left: 0;
+                    }
+                }
+                & a {
+                    font-size: 20px;
+                    line-height: 1.5;
+                    color: var(--tp-text-body);
+                    display: block;
+                    padding: 20px 30px;
+                    text-align: center;
+                    @media #{$md} {
+                        padding: 20px 5px;
+                        font-size: 18px;
+                    }
+                    &:hover {
+                        background-color: var(--tp-theme-primary);
+                        color: var(--tp-common-white);
+                    }
+                }
+            }
+        }
+    }
+    &-payment {
+        @media #{$xs} {
+            text-align: center !important;
+            padding-bottom: 30px;
+        }
+    }
+}
+.footer-bottom-7 {
+    & .footer-copyright span {
+        font-size: 18px;
+        line-height: 1.5;
+        color: rgba(72, 30, 11, 0.7);
+        padding: 42px 0;
+    }
+}

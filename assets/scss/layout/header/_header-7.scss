@@ -1,0 +1,188 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.7 Header Style 7
+/*----------------------------------------*/
+
+.header-7 {
+    & .logo {
+        padding: 0 40px;
+        position: relative;
+        display: inline-block;
+        @media #{$xs} {
+            padding: 0 15px;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 50%;
+            height: 112px;
+            width: 1px;
+            background-color: #D7C4AD;
+            transform: translateY(-50%);
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$md} {
+                height: 90px;
+            } 
+        }
+    }
+    & .header {
+        &__top{
+            padding: 17px 0;
+            &-content {
+                padding-left: 30px;
+                padding-right: 30px;
+                &  span {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    color: var(--tp-text-body);
+                }
+            }
+            & a {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.5;
+                color: var(--tp-text-body);
+                margin-left: 40px;
+                display: inline-block;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:hover {
+                    color: var(--tp-theme-primary);
+                }
+                & span {
+                    color: var(--tp-theme-primary);
+                    display: inline-block;
+                    transform: translateY(-2px);
+                    margin-right: 6px;
+                }
+            }
+        }
+        &__bottom {
+            border-top: 1px solid #D7C4AD;
+            border-bottom: 1px solid #D7C4AD;
+            @media #{$lg,$md,$xs} {
+                padding: 0 0;
+            }
+        }
+    }
+    & .header-3__right {
+        &  > a,
+        &  > button {
+            position: relative;
+            margin-left: 0;
+            height: 112px;
+            width: 112px;
+            line-height: 112px;
+            text-align: center;
+            @media #{$md} {
+                width: 90px;
+                height: 90px;
+                line-height: 90px;
+            }
+            @media #{$xs} {
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 50%;
+                height: 112px;
+                width: 1px;
+                background-color: #D7C4AD;
+                transform: translateY(-50%); 
+                @media #{$xs} {
+                    display: none;
+                }  
+                @media #{$md} {
+                    height: 90px;
+                } 
+            }
+        }
+        & .header-dots {
+            display: inline-block;
+            background-color: var(--tp-theme-primary);
+        }
+    }
+    & .offcanvas-open-btn i {
+        background-color: transparent;
+        text-align: center;
+        color: var(--tp-heading-primary);
+    }
+}
+.cart-7 {
+    height: 112px;
+    width: 112px;
+    border-left: 1px solid #D7C4AD;
+    text-align: center;
+    @media #{$md} {
+        height: 90px;
+        width: 90px;
+    }
+    @media #{$sm} {
+        height: 80px;
+        width: 80px;
+    }
+    & .cart-list-wrap {
+        padding: 42px 0;
+        position: relative;
+        @media #{$md} {
+            padding: 32px 0;
+        }
+        @media #{$sm} {
+            padding: 27px 0;
+        }
+    }
+    & .cart-list-wrapper {
+        margin-left: 0;
+    }
+}
+.header-sticky {
+    & .cart-7  {
+        height: 80px;
+        width: 80px;
+    }
+    & .cart-7 .cart-list-wrap {
+        padding: 27px 0;
+    }
+}
+.header-7 {
+    &-sticky {
+        & .main-menu ul li > a {
+            color: var(--tp-heading-primary);
+            padding: 41px 0;
+            text-align: left;
+        }
+        &.header-sticky {
+            & .main-menu ul li > a {
+                padding: 25px 0;
+            }
+            & .main-menu ul li .tp-submenu > li > a {
+                padding: 0 25px;
+            }
+            & .main-menu ul li .tp-submenu li a:hover {
+                padding-left: 43px;
+            }
+            & .header-3__right button ,
+            & .header-3__right > a {
+                height: 80px;
+                width: 80px;
+                line-height: 80px;
+                &::before {
+                    height: 80px;
+                }
+            }
+            & .logo::before {
+                height: 80px;
+            }
+        }
+    }
+}

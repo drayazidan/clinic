@@ -1,0 +1,133 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.11 Form css
+/*----------------------------------------*/
+.appoinment {
+    &-form {
+        &-input {
+            & input ,
+            & .doctor-name {
+                height: 80px;
+                width: 100%;
+                background-color: var(--tp-common-white);
+                border: none;
+                @include tp-placeholder {
+                    color: var(--tp-text-body);
+                }
+                &:focus {
+                    &::placeholder {
+                        font-size: 0;
+                    }
+                } 
+            }
+        }
+        &-submit {
+            & .tp-btn {
+                display: block;
+                width: 100%;
+                padding: 25px 0;
+            }
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        left: 140px;
+        bottom: 55px;
+        animation: tpswing 1s ease-in-out 1s forwards infinite alternate;
+        transform-origin: left center;
+    }
+    &-shape-2 {
+        position: absolute;
+        right: 130px;
+        top: 105px;
+        animation: tpupdown 2.3s ease-in-out 2.3s forwards infinite alternate;
+    }
+}
+.doctor-name span {
+    color: var(--tp-text-body);
+    font-weight: 400;
+    font-size: 20px;
+    font-family: var(--tp-ff-body);
+    line-height: 4;
+}
+.appoinment-2 {
+    &-thumb {
+        &-main {
+            margin-left: -70px;
+            position: relative;
+            z-index: 1;
+            @media #{$md,$xs} {
+                margin-left: 0;
+                margin-bottom: 50px;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                height: 700px;
+                width: 675px;
+                background: linear-gradient(180deg, #F7D7C8 0%, rgba(240, 222, 214, 0) 91.96%);
+                border-radius: 344.5px 344.5px 0px 0px;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                @media #{$xl,$lg,$md,$xs} {
+                    width: 100%;
+                }
+                @media #{$xs} {
+                    width: 100%;
+                    height: calc(100% + 30px);
+                }
+            }
+            & img {
+                max-width: inherit;
+                @media #{$xl,$lg,$md,$xs} {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    & .appoinment-form-input input ,
+    & .doctor-name {
+        border-radius: 40px;
+    }
+    & .appoinment-form-submit .tp-btn {
+        border-radius: 40px;
+    }
+}
+.appoinment-form-input input, .appoinment-form-input .doctor-name {
+	height: 80px;
+	width: 100%;
+	background: #FCF4F1;
+    border: 1px solid transparent;
+    &:focus {
+        border-color: var(--tp-theme-primary);
+    }
+}
+.appoinment-form-input {
+    & input {
+        background-color: var(--tp-common-white);
+    }
+    & .doctor-name {
+        background-color: var(--tp-common-white) !important;
+    }
+}
+.schedules {
+    &-list {
+        & span {
+            display: block;
+            line-height: 1.5;
+            color: var(--tp-text-body);
+            font-size: 20px;
+            margin-bottom: 13px;
+        }
+    }
+}
+.appoinment-3 {
+    & .appoinment-form-input input {
+        background-color: #FCF4F1;
+    }
+    & .appoinment-form-input .doctor-name {
+        background-color: #FCF4F1 !important;
+    }
+}

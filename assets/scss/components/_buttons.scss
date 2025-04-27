@@ -1,0 +1,195 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+/* theme btn */
+
+.tp-btn{
+	display: inline-block;
+	color: var(--tp-common-white);
+	background: var(--tp-theme-primary);
+	border: 2px solid var(--tp-theme-primary);
+	text-align: center;
+	font-family: var(--tp-ff-body);
+	padding: 8px 28px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.5;
+	@include tp-transition($property: all, $time: .3s,  $func : ease-out, $delay : .0s);
+	& i,
+	& svg{
+		margin-left: 5px;
+	}
+	& svg{
+		@include transform(translateY(-2px));
+	}
+	&:hover{
+		background: var(--tp-common-white);
+		color: var(--tp-theme-primary);
+	}
+	&:focus{
+		color: var(--tp-heading-primary);
+	}
+}
+
+.tp-btn-theme {
+	display: inline-block;
+	color: var(--tp-common-white);
+	background: var(--tp-heading-primary);
+	text-align: center;
+	font-family: var(--tp-ff-body);
+	padding: 23px 40px;
+	border: 2px solid var(--tp-heading-primary);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.5;
+	@include tp-transition($property: all, $time: .3s,  $func : ease-out, $delay : .0s);
+	& i,
+	& svg{
+		margin-left: 5px;
+	}
+	& svg{
+		@include transform(translateY(-2px));
+	}
+	&:hover{
+		background: var(--tp-common-white);
+		color: var(--tp-heading-primary);
+	}
+	&:focus{
+		color: var(--tp-heading-primary);
+	}
+}
+
+.tp-round-btn {
+	display: inline-block;
+	color: var(--tp-common-white);
+	background: var(--tp-theme-primary);
+	text-align: center;
+	font-family: var(--tp-ff-body);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	line-height: 1.5;
+	font-weight: 500;
+	font-size: 20px;
+	border: 2px solid var(--tp-theme-primary);
+	border-radius: 40px;
+	padding: 23px 38px;
+	@include tp-transition($property: all, $time: .3s,  $func : ease-out, $delay : .0s);
+	& i,
+	& svg{
+		margin-left: 5px;
+	}
+	& svg{
+		@include transform(translateY(-2px));
+	}
+	&:hover{
+		background: var(--tp-common-white);
+		color: var(--tp-theme-primary);
+	}
+	&:focus{
+		color: var(--tp-heading-primary);
+	}
+}
+
+
+/* theme btn */
+
+.tp-btn-2{
+	display: inline-block;
+	background: var(--tp-theme-4);
+	text-align: center;
+	font-family: var(--tp-ff-body);
+	padding: 25px 40px;
+	border-radius: 40px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	line-height: 1.5;
+	@include tp-transition($property: all, $time: .3s,  $func : ease-out, $delay : .0s);
+	font-weight: 500;
+	font-size: 20px;
+	color: var(--tp-heading-primary);
+	& i,
+	& svg{
+		margin-left: 5px;
+	}
+	& svg{
+		@include transform(translateY(-2px));
+	}
+	&:hover{
+		background: var(--tp-common-white);
+		color: var(--tp-theme-primary);
+	}
+	&:focus{
+		color: var(--tp-theme-primary);
+	}
+}
+
+.menu-btn {
+	display: inline-block;
+	color: var(--tp-common-white);
+	background: var(--tp-theme-primary);
+	border: 2px solid var(--tp-theme-primary);
+	text-align: center;
+	font-family: var(--tp-ff-body);
+	padding: 8px 18px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.5;
+	@include tp-transition($property: all, $time: .3s,  $func : ease-out, $delay : .0s);
+	& i,
+	& svg{
+		margin-left: 5px;
+	}
+	& svg{
+		@include transform(translateY(-2px));
+	}
+	&:hover{
+		background: var(--tp-common-white);
+		color: var(--tp-theme-primary);
+	}
+	&:focus{
+		color: var(--tp-theme-primary);
+	}
+	@media #{$sm} {
+		font-size: 15px;
+		padding: 8px 15px;
+	}
+}
+
+
+/* offcanvas btn */
+
+.tp-btn-offcanvas{
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--tp-common-white);
+	background: var(--tp-theme-primary);
+	text-align: center;
+	padding: 16px 22px;
+	letter-spacing: -0.02em;
+	position: relative;
+	z-index: 1;
+	text-transform: capitalize;
+
+	& i{
+		padding-left: 5px;
+	}
+	&:hover{
+		background-color: var(--tp-heading-primary);
+		color: var(--tp-common-white);
+	}
+}

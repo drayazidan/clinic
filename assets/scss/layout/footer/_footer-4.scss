@@ -1,0 +1,111 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.4 Footer Style 4
+/*----------------------------------------*/
+
+.footer-4 {
+    &-col-2 {
+        margin-left: -25px;
+        @media #{$xs} {
+            margin-left: 0px;
+        }
+    }
+    &-col-3 {
+        margin-left: 85px;
+        @media #{$xl,$md,$xs} {
+            margin-left: 0px;
+        }
+        @media #{$lg} {
+            margin-left: -60px;
+        }
+    }
+}
+.footer-top-4 {
+    & .footer-link  {
+        & li  {
+            margin-bottom: 26px;
+            a {
+                color: var(--tp-common-white);
+                &::before {
+                    background: #FFF;
+                }
+            }
+        }
+    }
+    &-border {
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+.footer {
+    &-appoinment {
+        & .appoinment {
+            font-size: 80px;
+            line-height: 1.1;
+            color: #FFFFFF;
+            margin-bottom: 0;
+            margin-top: -7px;
+            @media #{$xs} {
+                font-size: 34px;
+            }
+            & br {
+                @media #{$xs} {
+                    display: none;
+                }
+            }
+        }
+        & a {
+            flex: 0 0 auto;
+            display: inline-block;
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            color: var(--tp-theme-primary);
+            background-color: var(--tp-common-white);
+            border-radius: 50%;
+            text-align: center;
+            @media #{$lg} {
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+            }
+            @media #{$md} {
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+                margin-left: 20px;
+            }
+            @media #{$sm} {
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+            }
+            @media #{$xs} {
+                height: 50px;
+                width: 50px;
+                line-height: 49px;
+                margin-left: 20px;
+                transform: translateY(-8px);
+            }
+            &:hover {
+                box-shadow: inset 0 0 0 40px #E6AF9B;
+                color: var(--tp-common-white);
+            }
+            & svg {
+                @media #{$xs} {
+                    width: 24px;
+                }
+            }
+        }
+    } 
+    &-bottom-4 {
+        background: rgba(255, 255, 255, 0.06);
+        & span {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #FFFFFF;
+            opacity: 0.7;
+            padding: 15px 0;
+        }
+    }
+}

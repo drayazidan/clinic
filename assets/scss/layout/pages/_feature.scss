@@ -1,0 +1,75 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.10 Feature css
+/*----------------------------------------*/
+.feature-5 {
+    &-item {
+        @media #{$xs} {
+            margin-left: 0;
+        }
+        &:hover {
+            & .feature-5-icon span {
+                transform: translate3d(0, -5px, 0);
+            }
+        }
+    }
+    &-thumb {
+        & .mask {
+            mask-image: url(../img/feature/feature-shape.svg);
+            -webkit-mask-image: url(../img/feature/feature-shape.svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            @media #{$xs} {
+               mask-image: none;
+            }
+        }
+        & .mask-2 {
+            mask-image: url(../img/feature/feature-shape-2.svg);
+            -webkit-mask-image: url(../img/feature/feature-shape-2.svg);
+            mask-repeat: no-repeat;
+            -webkit-mask-repeat: no-repeat;
+            @media #{$xs} {
+                mask-image: none;
+             }
+        }
+        &-2 {
+            position: relative;
+            z-index: -1;
+        }
+    }
+    &-shape-1 {
+        position: absolute;
+        top: 50%;
+        left: -4%;
+        z-index: 1;
+        transform: translateY(-50%);
+    }
+    &-content {
+        & p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--tp-text-body);
+        }
+    }
+    &-title {
+        font-size: 40px;
+        line-height: 1.1;
+        color: var(--tp-heading-primary);
+        margin-bottom: 10px;
+        & a {
+            &:hover {
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-icon {
+        margin-bottom: 23px;
+        & span {
+            color: var(--tp-theme-primary);
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+            display: inline-block;
+        }
+    }
+}

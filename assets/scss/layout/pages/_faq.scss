@@ -1,0 +1,230 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.9 FAQ css
+/*----------------------------------------*/
+.faq-3 {
+    &-thumb-main {
+        text-align: end;
+        @media #{$md} {
+            text-align: center;
+        }
+        & img {
+            border-radius: 239px;
+        }
+    }
+    &-shape {
+        position: absolute;
+        top: 120px;
+        right: -85px;
+        animation: tptranslateY2 5s ease-in-out 0.1s forwards infinite alternate;
+        @media #{$xxl} {
+            right: -30px;
+        }
+        @media #{$md} {
+            right: 0px;
+        }
+    }
+}
+.tpfaq-3 {
+    @media #{$md,$xs} {
+        margin-right: 0;
+    }
+    &-accordion {
+        & .accordion-item{
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid rgba(71, 30, 10, 0.2);
+            &:first-of-type{
+                & .accordion-button{
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+            &:last-of-type{
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                & .accordion-button{
+                    &.collapsed{
+                        border-bottom-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+            }
+        }
+        & .accordion-button {
+            padding: 35px 0 35px 0;
+            padding-right: 50px;
+            font-weight: 500;
+            background-color: transparent;
+            font-size: 40px;
+            line-height: 1;
+            color: var(--tp-heading-primary) ;
+            @media #{$xl,$lg} {
+                font-size: 36px;
+            }
+            @media #{$xs} {
+                font-size: 26px;
+                padding-right: 30px;
+            }
+            &::after{
+                position: absolute;
+                content: '\f107';
+                font-family: var(--tp-ff-fontawesome);
+                background-image: none;
+                top: 31%;
+                right: 0;
+                @include transform(rotate(180deg));
+                color: var(--tp-theme-primary);
+                width: auto;
+                height: auto;
+                font-weight: 400;
+                font-size: 20px;
+                background: none;
+                @include square-btn (48px, $circle:true);
+                border: 1px solid #CD5F37;
+                @media #{$xl,$lg} {
+                    @include square-btn (40px, $circle:true);
+                }
+                @media #{$xs} {
+                    @include square-btn (30px, $circle:true);
+                }
+            }
+            &.collapsed{ 
+                &::after{
+                    @include transform(rotate(0deg));
+                    color:  var(--tp-common-black);
+                    border-color: var(--tp-heading-primary) ;
+                }
+            }
+            &:not(.collapsed){
+                color: var(--tp-theme-primary);
+                background-color: transparent;
+                box-shadow: none;
+            }
+            &:focus{
+                box-shadow: none;
+                border: 0;
+            }
+            &:hover{
+                color: var(--tp-theme-primary);
+                &::after{
+                    color: var(--tp-theme-primary);
+                    border-color: var(--tp-theme-primary);
+                }
+            }
+        }
+        & .accordion-body {
+            padding: 0 0 38px;
+            & p{
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 1.5;
+                color: var(--tp-text-body);
+                margin-top: 0px;
+                margin-bottom: 0;
+                @media #{$xs} {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+.comming-soon {
+    @media #{$md,$xs} {
+        margin-bottom: 40px;
+    }
+    &-title {
+        font-size: 152px;
+        line-height: 1.1;
+        @media #{$xl} {
+            font-size: 120px;
+        }
+        @media #{$lg} {
+            font-size: 110px;
+        }
+        @media #{$md} {
+            font-size: 80px;
+        }
+        @media #{$xs} {
+            font-size: 60px;
+        }
+    }
+    & p {
+        font-size: 24px;
+        line-height: 1.5;
+        & br {
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    &-shape {
+        position: absolute;
+        bottom: -60px;
+        left: -60px;
+        z-index: -1;
+        @media #{$xl,$lg,$md,$xs} {
+            display: none;
+        }
+    }
+    &-bg {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: -190px;
+            width: 615px;
+            height: 505px;
+            background-color: #CD5F37;
+        }
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            display: none;
+        }
+    }
+}
+.tpcoming {
+    &__countdown {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @media #{$xs} {
+            flex-wrap: wrap;
+        }
+        & span {
+            &.cdown {
+                background-color: var(--tp-theme-primary);
+                height: 100%;
+                width: 120px;
+                text-align: center;
+                margin-right: 24px;
+                padding: 16px 0;
+                margin-bottom: 20px;
+                & .time-count {
+                    color: var(--tp-common-white);
+                    font-size: 48px;
+                    line-height: 1.1;
+                    margin-bottom: 0;
+                }
+            }
+            & p {
+                color: var(--tp-common-white);
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+        }
+        
+    }
+    &__content {
+        padding-top: 280px;
+        & span {
+            margin-bottom: 5px;
+            display: inline-block;
+            font-size: 18px;
+            color: var(--tp-common-black);
+        }
+    }
+
+}

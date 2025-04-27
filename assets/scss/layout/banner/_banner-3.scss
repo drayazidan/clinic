@@ -1,0 +1,118 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  Banner Style 3
+/*----------------------------------------*/
+
+.tpbanner-3 {
+    &-title {
+        font-size: 130px;
+        line-height: 1.1;
+        color: var(--tp-heading-primary);
+        text-align: center;
+        @media #{$xl} {
+            font-size: 155px;
+            margin-bottom: 30px;
+        }
+        @media #{$lg} {
+            font-size: 140px;
+            margin-bottom: 60px;
+        }
+        @media #{$md} {
+            font-size: 100px;
+        }
+        @media #{$xs} {
+            font-size: 80px;
+            margin-bottom: 40px;
+        }
+    }
+    &-wrap {
+        position: relative;
+        z-index: 1;
+        @media #{$md,$xs} {
+            margin-bottom: 50px;
+        }
+        & p {
+            font-size: 23px;
+            line-height: 1.5;
+            color: var(--tp-text-body);
+        }
+    }
+    &-clients {
+        @media #{$md,$xs} {
+            margin-bottom: 20px;
+        }
+        & span {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1.5;
+            color: var(--tp-heading-primary);
+            display: block;
+            margin-top: 11px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: -80px;
+                height: 1px;
+                width: 80px;
+                background-color: rgba(205, 95, 55, 0.3);
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-thumb {
+        margin-left: -110px;
+        @media #{$lg,$md,$xs} {
+            margin-left: 0;
+        }
+        & img {
+            max-width: inherit;
+            @media #{$lg,$md,$xs} {
+                max-width: 100%;
+            }
+        }
+    }
+    &-thumb-2 {
+        margin-left: -30px;
+        @media #{$xl} {
+            margin-left: -70px;
+        }
+        @media #{$lg} {
+            margin-left: -70px;
+        }
+        @media #{$md,$xs} {
+            margin-bottom: 0;
+        }
+        & > a {
+            & > img {
+                max-width: inherit;
+                animation: tprotate 20s ease-in-out 0.1s forwards infinite;
+                @media #{$lg} {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    &-shape-2 {
+        position: absolute;
+        left: 32%;
+        bottom: 39%;
+        animation: tprotate 6s ease-in-out 0.1s forwards infinite alternate;
+    }
+    &-shape-3 {
+        position: absolute;
+        right: 30%;
+        bottom: 59%;
+        animation: tptranslateY2 4s ease-in-out 0.1s forwards infinite alternate;
+    }
+    &-shape-4 {
+        position: absolute;
+        right: 8%;
+        bottom: 0;
+        animation: tpswing 2s ease-in-out 0.1s forwards infinite alternate;
+        transform-origin: bottom right;
+    }
+}

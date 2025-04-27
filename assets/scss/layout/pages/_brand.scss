@@ -1,0 +1,124 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.3 Brand css
+/*----------------------------------------*/
+.brand {  
+    &-item {
+        @media #{$xs} {
+            text-align: center;
+        }
+        & a {
+            height: 140px;
+            width: 300px;
+            border: 1px solid rgba(72, 30, 11, .1);
+            border-radius: 120px;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--tp-common-white);
+            @media #{$sm} {
+                height: 110px;
+                width: 250px;
+            }
+            @media #{$xs} {
+                width: auto;
+                height: 140px;
+            }
+            &:hover {
+                background-color: var(--tp-theme-primary);
+                & img {
+                    filter: brightness(10);
+                }
+            }
+        }
+    }
+    &-slider {
+        &-wrap {
+            background-color: var(--tp-theme-primary);
+        }
+        &-title {
+            font-size: 80px;
+            line-height: 1.1;
+            color: var(--tp-common-white);
+            margin-bottom: 0;
+            padding: 40px 0;
+            @media #{$xs} {
+                font-size: 40px;
+            }
+            & i {
+                margin-right: 20px;
+                display: inline-flex;
+                @media #{$xs} {
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+.brand {
+    &-slider-3 {
+        & .brand-slider-title {
+            color: var(--tp-heading-primary);
+            padding: 30px 0;
+        }
+        &-text {
+            & span {
+                font-size: 24px;
+                line-height: 1.5;
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-slider-4 {
+        & .brand-slider-title {
+            padding: 60px 0;
+            margin: 15px 0 25px 0;
+        }
+    }
+}
+.brand-6 {
+    &-title {
+        font-size: 40px;
+        line-height: 1.1;
+    }
+    &-item {
+        text-align: center;
+        & img {
+            width: 145px;
+        }
+    }
+}
+.appoinment-5 {
+    &-bg {
+        padding: 98px 0 98px 0;
+    }
+    &-btn {
+        & .tp-round-btn {
+            background-color: var(--tp-common-white);
+            color: var(--tp-heading-primary);
+            border: 2px solid var(--tp-common-white);
+            &:hover {
+                background-color: var(--tp-theme-primary);
+                color: var(--tp-common-white);
+            }
+        }
+    }
+}
+.instagram-7 {
+    &-thumb {
+        margin-bottom: 8px;
+        & img {
+            width: 100%;
+        }
+    }
+    &-wrapper {
+        & .container-fluid {
+            padding-right: var(--bs-gutter-x, 10px);
+            padding-left: var(--bs-gutter-x, 10px);
+        }
+    }
+}

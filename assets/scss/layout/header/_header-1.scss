@@ -1,0 +1,186 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+
+.menu-position {
+    margin-left: -6px;
+    @media #{$xl} {
+        margin-left: 25px;
+    }
+}
+.header {
+    &__opacity {
+        & span {
+            color: var(--tp-heading-primary);
+            @include transition(.3s);
+            &:hover {
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &__bottom-wrap{
+        @media #{$lg,$md,$xs,$sm} {
+            padding: 20px 0;
+        }
+        &-right {
+            @media #{$xl} {
+                margin-left: -50px;
+            }
+        }
+    }
+    &__search,
+    &__phone {
+        & i {
+            @include square-btn (56px, $circle: true);
+            background-color: rgba(255, 255, 255, .2);
+            display: inline-block;
+            line-height: 52px;
+            cursor: pointer;
+            @include transition(.3s);
+            color: var(--tp-common-white);
+            &:hover {
+                box-shadow: inset 0 0 0 40px var(--tp-common-white);
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &__phone {
+        margin-left: 21px;
+    }
+    &__contact {
+        margin-left: 12px;
+        & span {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            display: block;
+        }
+        & a {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 1.5;
+            color: var(--tp-common-white);
+            @media #{$xl} {
+                font-size: 16px;
+            }
+        }
+    }
+}
+.offcanvas-open-btn {
+    & i {
+        @include square-btn (56px, $circle: true);
+        background-color: rgba(255, 255, 255, .2);
+        display: inline-block;
+        line-height: 53px;
+        cursor: pointer;
+        color: var(--tp-common-white);
+    }
+}
+// Search
+.tpsearchbar {
+	background-color: var(--tp-common-white);
+	text-align: start;
+	position: fixed;
+	right: 0;
+    left: 0;
+    margin: 0 auto;
+	top: 0;
+	width: 100%;
+	min-height: 320px;
+	box-shadow: rgba(5, 13, 54, 0.05) 5px 15px 30px 0px;
+	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 99999;
+	padding: 30px;
+	transform: translateY(-100%);
+    &__title {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 35px;
+        @media #{$xs} {
+            font-size: 12px;
+        }
+        @media #{$sm} {
+            font-size: 30px;
+        }
+    }
+    &.tp-searchbar-opened{
+        transform: translateY(0); 
+    }
+    &__close {
+        color: var(--tp-theme-primary);
+        font-size: 30px;
+        background: var(--tp-theme-1);
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        &:hover {
+            background-color: var(--tp-theme-2);
+        }
+    }
+    &__form {
+        position: relative;
+        & input {
+            width: 100%;
+            height: 80px;
+            border: 1px solid transparent;
+            padding: 10px 50px 10px 40px;
+            color: var(--tp-text-body);
+            font-size: 20px;
+            font-weight: 400;
+            &::placeholder {
+                font-size: 20px;
+                color: var(--tp-text-body);
+            }
+            &:focus {
+                border: 1px solid var(--tp-theme-primary);
+            }
+        }
+    }
+    &__search-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        color: var(--tp-theme-primary);
+        font-size: 24px;
+    }
+}
+.search-body-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease-out 0s;
+    &.opened {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.header-1 {
+    & .header-sticky {
+        & .main-menu ul li {
+            & > a {
+                padding: 25px 0;
+            }
+            & .tp-submenu li a {
+                padding: 0 25px;
+                &:hover {
+                    padding-left: 43px;
+                }
+            }
+        }
+    }
+}
+.tp-header-height {
+    @media #{$xs,$sm,$md,$lg} {
+        height: inherit !important;
+    }
+}
