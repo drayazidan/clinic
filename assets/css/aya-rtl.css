@@ -1,0 +1,124 @@
+/* Arabic / RTL overrides. Loaded after bootstrap-rtl.css, main.css and aya.css on ar/index.html only. */
+
+/* ---- Arabic typography ---- */
+html[dir="rtl"] {
+  --tp-ff-body: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  --tp-ff-p: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  --tp-ff-heading: 'El Messiri', 'Segoe UI', Tahoma, serif;
+}
+html[dir="rtl"] body {
+  font-family: var(--tp-ff-body);
+}
+html[dir="rtl"] p,
+html[dir="rtl"] .accordion-body p {
+  font-size: 17px;
+  line-height: 1.85;
+}
+html[dir="rtl"] .aya-lead {
+  font-size: 19px;
+}
+html[dir="rtl"] .aya-note {
+  font-size: 15px;
+}
+/* Arabic script never uses letter spacing or uppercase */
+html[dir="rtl"] .aya-eyebrow,
+html[dir="rtl"] .aya-tag {
+  letter-spacing: 0;
+  text-transform: none;
+}
+/* Numbers and "+"/"K+" read left to right */
+html[dir="rtl"] .counter-content .count {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* ---- Page width: RTL pages can scroll into anything that overflows on the left ---- */
+html[dir="rtl"],
+html[dir="rtl"] body {
+  overflow-x: clip;
+}
+
+/* Slide-out menu comes in from the left in RTL */
+html[dir="rtl"] .offcanvas__area {
+  right: auto;
+  left: 0;
+  max-width: 100vw;
+  transform: translateX(calc(-100% - 80px));
+}
+html[dir="rtl"] .offcanvas__area.offcanvas-opened {
+  transform: translateX(0);
+}
+html[dir="rtl"] .offcanvas__close {
+  text-align: left;
+}
+
+/* ---- Header ---- */
+html[dir="rtl"] .header__social ul li {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 15px;
+  padding-right: 15px;
+}
+html[dir="rtl"] .header__social ul li::before {
+  left: auto;
+  right: 0;
+}
+html[dir="rtl"] .header-top-right i {
+  margin-left: 6px;
+}
+html[dir="rtl"] .main-menu-3 > nav > ul > li {
+  margin-right: 0;
+  margin-left: 36px;
+}
+html[dir="rtl"] .header__btn-3 .tp-btn {
+  white-space: nowrap;
+}
+html[dir="rtl"] .offcanvas-btn.ml-20 {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* ---- Hero ---- */
+@media (max-width: 767px) {
+  html[dir="rtl"] .tpbanner-3-title {
+    font-size: 64px;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 1200px) {
+  html[dir="rtl"] .tpbanner-3-thumb {
+    margin-left: 0;
+    margin-right: -110px;
+  }
+}
+
+/* ---- Results / lists ---- */
+html[dir="rtl"] .aya-tag {
+  left: auto;
+  right: 20px;
+}
+html[dir="rtl"] .aya-checks i {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* ---- YouTube Shorts cards ---- */
+html[dir="rtl"] .aya-short-play {
+  right: auto;
+  left: 14px;
+}
+
+/* ---- FAQ accordion: icon on the left ---- */
+html[dir="rtl"] .accordion-button {
+  text-align: right;
+}
+html[dir="rtl"] .tpfaq-3-accordion .accordion-button {
+  padding-right: 0;
+  padding-left: 60px;
+  line-height: 1.4;
+}
+html[dir="rtl"] .tpfaq-3-accordion .accordion-button::after {
+  right: auto;
+  left: 0;
+}

@@ -24,6 +24,32 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Language switch (English <-> Arabic) next to the booking button */
+.aya-lang {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 16px;
+  margin-inline-end: 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(72, 30, 11, .2);
+  color: var(--tp-heading-primary);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color .2s, color .2s;
+}
+.aya-lang:hover {
+  background-color: var(--tp-heading-primary);
+  color: #fff;
+}
+.aya-lang[lang="ar"] {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+.header__btn-3 .tp-btn {
+  white-space: nowrap;
+}
+
 /* Keep the five section links on one line */
 .main-menu-3 > nav > ul {
   white-space: nowrap;

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="330" viewBox="0 0 330 330">
+  <defs>
+    <path id="ring" d="M165 165 m-128 0 a128 128 0 1 1 256 0 a128 128 0 1 1 -256 0"/>
+  </defs>
+  <circle cx="165" cy="165" r="165" fill="#CD5F37"/>
+  <circle cx="165" cy="165" r="95" fill="none" stroke="#FDF2ED" stroke-opacity=".3"/>
+  <text font-family="'Segoe UI', Tahoma, 'Noto Sans Arabic', Arial, sans-serif" font-size="25" fill="#FDF2ED">
+    <textPath href="#ring" xlink:href="#ring" xmlns:xlink="http://www.w3.org/1999/xlink">احجزي استشارتك ✦ احجزي استشارتك ✦ احجزي استشارتك ✦ احجزي استشارتك ✦</textPath>
+  </text>
+  <g fill="none" stroke="#FDF2ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M195 195 L137 137"/>
+    <path d="M137 185 L137 137 L185 137"/>
+  </g>
+</svg>
