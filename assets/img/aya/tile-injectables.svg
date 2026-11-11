@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="326" viewBox="0 0 326 326"><defs><linearGradient id="g" x1="85.35533905932738%" y1="14.644660940672622%" x2="14.64466094067263%" y2="85.35533905932738%"><stop offset="0" stop-color="#F7E6D4"/><stop offset="1" stop-color="#F0DED6"/></linearGradient></defs><rect width="326" height="326" fill="url(#g)"/><g transform="translate(98 50) scale(0.65)" fill="none" stroke="#481E0B" color="#481E0B" stroke-width="3.6923076923076925" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="rotate(-40 100 100)">
+      <rect x="62" y="84" width="76" height="32" rx="6"/>
+      <path d="M138 100 H 178" />
+      <path d="M62 92 H 40 M62 108 H 40 M40 86 V 114" />
+      <path d="M34 100 H 22 M22 88 V 112" />
+      <path d="M80 84 V 96 M96 84 V 96 M112 84 V 96 M128 84 V 96" opacity=".6"/>
+    </g>
+    <circle cx="160" cy="58" r="3" fill="currentColor" stroke="none"/></g><text x="163" y="236" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" fill="#481E0B">Injectables</text><text x="163" y="266" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" letter-spacing="2.5" fill="#481E0B" opacity=".8">@DRAYAZIDAN</text><path transform="translate(276 30) scale(0.3448275862068966)" opacity="0.6" d="M58 29C41.98 29 29 16.02 29 0C29 16.02 16.02 29 0 29C16.02 29 29 41.98 29 58C29 41.98 41.98 29 58 29Z" fill="#481E0B"/></svg>
