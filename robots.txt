@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drayazidan.github.io/clinic/sitemap.xml

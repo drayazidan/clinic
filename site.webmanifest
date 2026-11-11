@@ -1,0 +1,12 @@
+{
+  "name": "Dr. Aya Zidan | Plastic & Cosmetic Surgeon",
+  "short_name": "Dr. Aya Zidan",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FDF2ED",
+  "theme_color": "#CD5F37",
+  "icons": [
+    { "src": "assets/img/aya/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/aya/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
