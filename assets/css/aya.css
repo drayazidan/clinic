@@ -151,3 +151,42 @@ section[id], footer[id] {
 .aya-social .tiktok-embed {
   margin: 0 auto;
 }
+
+/* Mobile/tablet hero: show Dr. Aya's photo first, above her name */
+@media (max-width: 991px) {
+  .aya-hero {
+    display: flex;
+    flex-direction: column;
+  }
+  .aya-hero > .row {
+    display: contents;
+  }
+  .aya-hero-photo {
+    order: -1;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 575px) {
+  /* Edge to edge on phones so the photo reads large */
+  .aya-hero-photo {
+    align-self: stretch !important;
+    width: calc(100% + 30px);
+    max-width: none;
+    margin: 0 -15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 991px) {
+  /* Floating decorations are placed for the desktop layout; they overlap the name once reordered */
+  .aya-hero .tpbanner-3-shape {
+    display: none !important;
+  }
+  .aya-hero-photo .tpbanner-3-thumb img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
