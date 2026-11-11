@@ -1,0 +1,21 @@
+/* Dr. Aya Zidan site overrides. Loaded after main.css. */
+
+/* The hero name is now an h1 for SEO; keep the template's h4 look. */
+h1.tpbanner-3-title {
+  margin-bottom: 0;
+}
+
+/* Footer social row: six smaller icons that fit the narrow first column. */
+.aya-footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+.aya-footer-social a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  margin-right: 0;
+}
