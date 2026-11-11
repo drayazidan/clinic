@@ -19,3 +19,135 @@ h1.tpbanner-3-title {
   font-size: 15px;
   margin-right: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep the five section links on one line */
+.main-menu-3 > nav > ul {
+  white-space: nowrap;
+}
+.main-menu-3 > nav > ul > li {
+  margin-right: 36px;
+}
+section[id], footer[id] {
+  scroll-margin-top: 90px;
+}
+
+/* Shared bits */
+.aya-eyebrow {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--tp-theme-primary);
+  margin-bottom: 12px;
+}
+.aya-lead {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.aya-note {
+  font-size: 14px;
+  opacity: .8;
+  margin-bottom: 0;
+}
+
+/* Results */
+.aya-results-photo {
+  position: relative;
+  border-radius: 200px 200px 24px 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(72, 30, 11, .15);
+}
+.aya-results-photo img {
+  width: 100%;
+  display: block;
+}
+.aya-tag {
+  position: absolute;
+  left: 20px;
+  padding: 4px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, .9);
+  color: var(--tp-heading-primary);
+}
+.aya-tag-before { top: calc(50% - 44px); }
+.aya-tag-after { bottom: 20px; }
+.aya-checks {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;
+}
+.aya-checks li {
+  padding: 8px 0;
+  color: var(--tp-heading-primary);
+}
+.aya-checks i {
+  color: var(--tp-theme-primary);
+  margin-right: 10px;
+}
+
+/* YouTube Shorts cards */
+.aya-short {
+  display: block;
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--tp-heading-primary);
+}
+.aya-short img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .4s ease;
+}
+.aya-short::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(72, 30, 11, .92) 0%, rgba(72, 30, 11, 0) 60%);
+}
+.aya-short:hover img {
+  transform: scale(1.08);
+}
+.aya-short-play {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  background: var(--tp-theme-primary);
+  color: #fff;
+  font-size: 13px;
+}
+.aya-short-title {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 16px;
+  z-index: 1;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+/* Instagram / TikTok embeds */
+.aya-social .instagram-media {
+  min-width: 0 !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+.aya-social .tiktok-embed {
+  margin: 0 auto;
+}
